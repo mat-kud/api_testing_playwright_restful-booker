@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        //playwright support only baseUrl and paths
+        //its recommended to create separate tsconfig.json for tests folder
+        "baseUrl": ".",
+        "paths": {
+
+        }
+    }
+}
