@@ -3,7 +3,7 @@ require('dotenv').config({path: '.env'});
 
 const config: PlaywrightTestConfig = {
     testDir: 'tests',
-    fullyParallel: true,
+    fullyParallel: false,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 2 : 0,
     workers: process.env.CI ? 1 : undefined,
@@ -18,19 +18,23 @@ const config: PlaywrightTestConfig = {
     },
     projects:[
         {
-            name: 'Chromium',
-            use: {browserName: 'chromium'}
-        },
-        {
-            name: 'Firefox',
-            use: {browserName: 'firefox'}
-        },
-        {
-            name: 'Webkit',
-            use: {browserName: 'webkit'}
+            name: 'Restful-booker'
         }
+        // {
+        //     name: 'Chromium',
+        //     use: {browserName: 'chromium'}
+        // },
+        // {
+        //     name: 'Firefox',
+        //     use: {browserName: 'firefox'}
+        // },
+        // {
+        //     name: 'Webkit',
+        //     use: {browserName: 'webkit'}
+        // }
     ],
-    globalSetup: require.resolve('./global-setup')
+    //executed before every single test
+    //globalSetup: require.resolve('./global-setup')
 }
 
 export default config

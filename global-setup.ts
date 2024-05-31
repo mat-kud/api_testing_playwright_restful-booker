@@ -1,4 +1,4 @@
-import { PlaywrightTestConfig, request, expect } from "@playwright/test";
+import { PlaywrightTestConfig, request } from "@playwright/test";
 
 async function globalSetup(config: PlaywrightTestConfig) {
   const url = "https://restful-booker.herokuapp.com/auth";
